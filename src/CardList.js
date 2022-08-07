@@ -1,22 +1,17 @@
 import "./App.css";
 import Card from "./Card";
 
-function CardList() {
+function CardList({list}) {
   return (
     <>
       <div class="row">
-        <div class="column">
-          <Card />
-        </div>
-        <div class="column">
-          <Card />
-        </div>
-        <div class="column">
-          <Card />
-        </div>
-        <div class="column">
-          <Card />
-        </div>
+        {list.map(element =>
+            <div class="column">
+            <Card
+              {...element}
+            />
+          </div>
+        )}
       </div>
     </>
   );

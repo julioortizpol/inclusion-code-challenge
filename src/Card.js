@@ -1,14 +1,16 @@
 import "./App.css";
 
-function Card() {
+function Card({name, hostname, message, time}) {
   return (
     <>
-      <div class="card">
-        <div class="cardContainer">
-          <h4>
-            <b>John Doe</b>
-          </h4>
-          <p>Architect & Engineer</p>
+      <div className="card">
+        <div className="cardContainer">
+          <h2>
+            <b>{name}</b>
+          </h2>
+          <p>{message}</p>
+          <p>{hostname}</p>
+          <p>{time}</p>
         </div>
       </div>
     </>
