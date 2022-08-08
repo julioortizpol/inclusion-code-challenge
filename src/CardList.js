@@ -8,7 +8,8 @@ function CardList({list}) {
         {list.map(element =>
             <div class="column">
             <Card
-              {...element}
+            key={element.name}
+            {...element}
             />
           </div>
         )}
