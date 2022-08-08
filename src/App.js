@@ -5,7 +5,7 @@ import axios from "axios";
 
 import "./App.css";
 
-const apiIntervalTime = 15000; // time in milliseconds
+const apiCallIntervalTime = 15000; // time in milliseconds
 const apis = [
   { name: "accounts" },
   { name: "assets" },
@@ -65,7 +65,7 @@ function App() {
     return () => {
       if(called) {
         getApiStatus()
-        setInterval(getApiStatus, apiIntervalTime)
+        setInterval(getApiStatus, apiCallIntervalTime)
       }
       called = false
     }
